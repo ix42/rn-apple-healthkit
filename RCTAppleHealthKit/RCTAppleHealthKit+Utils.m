@@ -468,12 +468,19 @@
             return @"MixedCardio";
         case HKWorkoutActivityTypeHandCycling:
             return @"HandCycling";
+        case HKWorkoutActivityTypeDiscSports:
+            return @"DiscSports";
+        case HKWorkoutActivityTypeFitnessGaming:
+            return @"FitnessGaming";
         default:{
-            NSException *e = [NSException
-                              exceptionWithName:@"HKWorkoutActivityType InvalidValue"
-                              reason:@"HKWorkoutActivityType can only have a value from the HKWorkoutActivityType enum"
-                              userInfo:nil];
-            @throw e;
+            /*
+                NSException *e = [NSException
+                                  exceptionWithName:@"HKWorkoutActivityType InvalidValue"
+                                  reason:@"HKWorkoutActivityType can only have a value from the HKWorkoutActivityType enum"
+                                  userInfo:nil];
+                @throw e;
+            */
+            return @"Other";
         }
     }
 }
